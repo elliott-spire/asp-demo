@@ -1,0 +1,78 @@
+body {
+    background: #283446;
+}
+#map {
+    width: 1220px;
+    height: 800px;
+}
+.popup {
+    display: none;
+    position: absolute;
+    background-color: #22293d;
+    font-family: monospace;
+    padding: 40px;
+    border: 2px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    top: 10px;
+    left: 10px;
+    max-width: 800px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.title {
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'serif';
+}
+#vesselPopup {
+  z-index: 100;
+  cursor: move;
+}
+#vesselInfo {
+  cursor: default;
+  margin: 20px;
+}
+.remove {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    color: #000000;
+    margin-right: 10px;
+    background: #ffffff;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 10px;
+    margin: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.remove:hover {
+    color: white;
+    background: rgba(210, 32, 31, 0.8);
+}
+.remove:active {
+    color: white;
+    background: rgba(210, 32, 31, 1.0);
+}
+#buttons {
+
+}
+#left,
+#right,
+#playpause {
+
+}
+#left {
+
+}
+#right {
+
+}
+#playpause {
+
+}

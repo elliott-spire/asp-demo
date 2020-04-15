@@ -1,0 +1,1 @@
+var vessels6 = {"type": "FeatureCollection", "features": []};

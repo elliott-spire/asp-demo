@@ -1,0 +1,34 @@
+TL
+
+Latitude: -3.154137019782996
+Longitude: -209.58807094665164
+
+BL
+
+Latitude: -73.0804081248023
+Longitude: -209.641277370518
+
+
+TR
+Latitude: -3.25693038289896
+Longitude: -97.53679007794108
+
+BR
+Latitude: -73.02720170093595
+Longitude: -97.78508672265076
+
+
+
+
+
+Top
+Latitude: -3.25693038289896
+
+Bottom
+Latitude: -73.0804081248023
+
+Left
+Longitude: -209.641277370518
+
+Right
+Longitude: -97.53679007794108

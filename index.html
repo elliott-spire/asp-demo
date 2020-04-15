@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <!-- https://openlayers.org/en/latest/examples/wms-tiled.html -->
+    <!-- https://openlayers.org/en/latest/examples/wms-image.html -->
+    <head>
+        <meta name="viewport" content="width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
+        <title>WMS Map</title>
+        <!-- 3rd-Party Library for maps and map features -->
+        <script src="lib/OpenLayers.js"></script>
+        <link rel="stylesheet" href="lib/OpenLayers.css" type="text/css">
+        <!-- 3rd-Party Library for JSON viewer UI (some customization) -->
+        <script src="lib/jsonview.js"></script>
+        <link rel="stylesheet" href="lib/jsonview.css" type="text/css">
+        <!-- simple w3schools.com snippet for making a DOM element draggable -->
+        <script type="text/javascript" src="lib/draggable_element.js"></script>
+        <!-- custom CSS -->
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+    </head>
+    <script src="json/vessels1.js"></script>
+    <script src="json/vessels2.js"></script>
+    <script src="json/vessels3.js"></script>
+    <script src="json/vessels4.js"></script>
+    <script src="json/vessels5.js"></script>
+    <script src="json/vessels6.js"></script>
+    <script src="json/vessels7.js"></script>
+    <script src="json/vessels8.js"></script>
+    <script src="json/vessels9.js"></script>
+    <script src="json/vessels10.js"></script>
+    <script src="json/vessels11.js"></script>
+    <script src="json/vessels12.js"></script>
+    <script src="json/vessels13.js"></script>
+    <script src="json/vessels14.js"></script>
+    <script src="json/vessels15.js"></script>
+    <script src="json/vessels16.js"></script>
+    <script src="json/vessels17.js"></script>
+    <script src="json/vessels18.js"></script>
+    <script src="json/vessels19.js"></script>
+    <script src="json/vessels20.js"></script>
+    <script src="json/vessels21.js"></script>
+    <script src="json/vessels22.js"></script>
+    <script src="json/vessels23.js"></script>
+    <script src="json/vessels24.js"></script>
+    <script src="json/vessels25.js"></script>
+    <script src="json/vessels26.js"></script>
+    <script src="json/vessels27.js"></script>
+    <script src="json/vessels28.js"></script>
+    <script src="json/vessels29.js"></script>
+    <body>
+        <!------------------------>
+        <!-- Vessel Info Popup  -->
+        <!------------------------>
+        <div id="vesselPopup" class="popup">
+          <h1 id="vessel_title" class="title">Spire Vessels API Data</h1>
+          <button id="closeVesselPopup" class="remove">
+            X
+          </button>
+          <div id="vesselInfo"></div>
+        </div>
+        <script>
+            window.VESSELS = {
+                'vessels1' : vessels1,
+                'vessels2' : vessels2,
+                'vessels3' : vessels3,
+                'vessels4' : vessels4,
+                'vessels5' : vessels5,
+                'vessels6' : vessels6,
+                'vessels7' : vessels7,
+                'vessels8' : vessels8,
+                'vessels9' : vessels9,
+                'vessels10' : vessels10,
+                'vessels11' : vessels11,
+                'vessels12' : vessels12,
+                'vessels13' : vessels13,
+                'vessels14' : vessels14,
+                'vessels15' : vessels15,
+                'vessels16' : vessels16,
+                'vessels17' : vessels17,
+                'vessels18' : vessels18,
+                'vessels19' : vessels19,
+                'vessels20' : vessels20,
+                'vessels21' : vessels21,
+                'vessels22' : vessels22,
+                'vessels23' : vessels23,
+                'vessels24' : vessels24,
+                'vessels25' : vessels25,
+                'vessels26' : vessels26,
+                'vessels27' : vessels27,
+                'vessels28' : vessels28,
+                'vessels29' : vessels29
+            }
+        </script>
+        <div id="map" class="map"></div>
+        <div id="buttons">
+            <div id="left"></div>
+            <div id="playpause"></div>
+            <div id="right"></div>
+        </div>
+        <script src="js/feature_styles.js"></script>
+        <script src="js/wms_layer.js"></script>
+        <script src="js/map_maker.js"></script>
+    </body>
+</html>
