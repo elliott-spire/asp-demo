@@ -4,9 +4,9 @@ var vesselStyle = function(feature) {
         zIndex: Infinity,
         image: new ol.style.Icon({
             anchor: [0.5, 0.5],
-            scale: 0.3,
+            scale: 0.15,
             opacity: 0.4,
-            rotation: feature.get('data')['heading_radians'],
+            rotation: feature.get('heading_radians'),
             src: 'img/blue_ship.png'
         })
     });

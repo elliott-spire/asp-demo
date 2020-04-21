@@ -4,6 +4,7 @@ body {
 #map {
     width: 1220px;
     height: 800px;
+    opacity: 0;
 }
 .popup {
     display: none;

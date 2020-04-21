@@ -29,3 +29,15 @@ document.getElementById('right').onclick = function() {
 		iterateForward();
 	}
 }
+
+map.onclick = function(evt) {
+ 	document.getElementById('left').style.display = 'none';
+ 	document.getElementById('right').style.display = 'none';
+ 	document.getElementById('playpause').style.display = 'none';
+}
+
+map.onmouseenter = function() {
+ 	document.getElementById('left').style.display = 'block';
+ 	document.getElementById('right').style.display = 'block';
+ 	document.getElementById('playpause').style.display = 'block';
+}

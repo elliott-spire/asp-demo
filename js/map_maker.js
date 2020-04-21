@@ -10,16 +10,6 @@ var imageExtent = [
   -3.25693038289896
 ];
 
-// create WMS layer
-window.SpireWMSLayer = new ol.layer.Image();
-// create Vessel layer
-window.SpireVesselLayer = new ol.layer.Vector({
-  zIndex: 100,
-  style: vesselStyle,
-  source: new ol.source.Vector({
-    features: null
-  })
-});
 // set WMS animation index
 window.WMS_Animation_Time_Index = 1;
 
@@ -29,10 +19,7 @@ window.ol_map = new ol.Map({
     new ol.layer.Tile({
       source: new ol.source.OSM(),
       opacity: 0
-    }),
-    // add WMS layer
-    window.SpireWMSLayer,
-    window.SpireVesselLayer
+    })
   ],
   target: 'map',
   view: new ol.View({
@@ -47,5 +34,37 @@ window.ol_map = new ol.Map({
   })
 });
 
-changeWMSImage('wms/1.png');
-changeVessels(1);
+// create and add WMS layers
+window.SpireWMSLayers = [];
+for (var i=1; i<=29; i++) {
+  var id = String(i)
+  var img = 'wms/' + id + '.png';
+  // load img to invisible <img> element
+  // to ensure it's cached by the browser
+  window.SpireWMSLayers[i] = new ol.layer.Image({
+    visible: false, // initialize as invisible
+    source: new ol.source.ImageStatic({
+      url: img,
+      projection: 'EPSG:4326',
+      imageExtent: imageExtent
+    })
+  });
+  // add invisible WMS layer to map
+  window.ol_map.addLayer(window.SpireWMSLayers[i]);
+}
+// create Vessel layer
+window.SpireVesselLayer = new ol.layer.Vector({
+  zIndex: 100,
+  style: vesselStyle,
+  source: new ol.source.Vector({
+    features: null
+  })
+});
+
+// add Vessel layer to map
+window.ol_map.addLayer(window.SpireVesselLayer);
+
+document.body.onload = function() {
+  // initialize time
+  playTime(true);
+}
